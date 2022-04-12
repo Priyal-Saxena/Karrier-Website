@@ -1,0 +1,194 @@
+.PlacedStudentsSection {
+	/* margin: 0;
+	padding: 0; */
+	/* box-sizing: border-box; */
+	font-family: "Roboto Slab", serif;
+	font-size: 14px;
+	line-height: 1.67;
+	color: #444;
+	padding: 60px 0;
+	min-height: 100vh;
+	/* background-color: rgb(136, 48, 48); */
+	/* width: 100%; */
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: space-around;
+	align-items: center;
+	/* flex-direction: row; */
+	/* flex-wrap: wrap; */
+	overflow: hidden;
+}
+
+ul {
+	list-style-type: none;
+}
+a {
+	color: #e45245;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*  Team Starts */
+.team-members {
+	transform: rotate(-45deg);
+}
+.team-members li > div {
+	float: left;
+	width: 15%;
+}
+
+.team-members li:nth-child(2) > div:first-child {
+	/* margin-left: 20%; */
+	/* margin-left: -20%; */
+}
+.team-members li:nth-child(2) > div {
+	margin-top: 20%;
+}
+.team-members li:nth-child(2) {
+	margin-left: -15% !important;
+}
+
+.team-members li:last-child > div:first-child {
+	/* margin-left: 40%; */
+}
+.team-members li:last-child > div {
+	margin-top: 40%;
+}
+
+/* Team overview */
+.team-overview {
+	padding-right: 15px;
+	width: 40%;
+}
+.team-overview h2 {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.team-overview > a {
+	margin-bottom: 30px;
+	display: block;
+}
+
+.team-overview > a:before {
+	content: "";
+	width: 10px;
+	height: 2px;
+	position: relative;
+	top: -3px;
+	margin-right: 5px;
+	/* background-color: #ccc; */
+	display: inline-block;
+}
+
+/* For centering elements - optional - Can use table,tablecell instead */
+.flex-center {
+	/* background-color: #444; */
+	display: flex;
+	width: fit-content;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-center > div:first-child {
+	order: 2;
+}
+.placedStudentHeading {
+	margin-top: -90px;
+	max-width: 480px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1100px) {
+	.PlacedStudentsSection {
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.sm-no-flex {
+		display: block;
+	}
+	.sm-no-float {
+		float: none !important;
+	}
+	.sm-text-center {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.team-members li {
+		text-align: center;
+	}
+	.team-members li > div {
+		float: none;
+		display: inline-block;
+		width: 30%;
+		margin: 0 !important;
+	}
+	.team-members {
+		transform: rotate(0);
+	}
+	.member-details img {
+		transform: rotate(0) translate(0, 0);
+	}
+	.team-overview {
+		padding: 15px;
+	}
+	.placedStudentHeading {
+		margin-top: -50px;
+	}
+}
+
+@media only screen and (max-width: 399px) {
+	.team-members li > div {
+		width: 48%;
+	}
+}
+
+/* extra */
+/* .copyright {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 1.6rem;
+	background-color: #eee;
+}
+.copyright a {
+	display: inline-block;
+	padding: 10px 2px;
+}
+.upwork {
+	color: #37a000;
+}
+.upwork:after {
+	content: "/";
+	margin-left: 10px;
+}
+.fiverr {
+	color: #1dbf73;
+}
+.copyright .triplebyte {
+	display: block;
+	padding-top: 0;
+	color: #344759;
+	text-decoration: underline;
+} */
+
+.text {
+	width: 30%;
+	/* margin: 0px !important; */
+	margin-right: 0;
+	background-color: #ccc;
+}
+
+.manyMore {
+	color: grey;
+	text-align: right;
+	padding-right: 30px;
+	font-size: 15px;
+}

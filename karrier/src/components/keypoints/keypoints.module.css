@@ -1,0 +1,47 @@
+.keypoints {
+	width: 100%;
+	min-height: 30vh;
+	background-color: white;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	flex-wrap: wrap;
+}
+.keypoint {
+	width: 13vw;
+	margin: 5px;
+	min-width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	justify-content: space-evenly;
+	/* background-color: aquamarine; */
+}
+
+.keypoint:hover {
+	fill: #da4567;
+	color: #da4567;
+}
+.keypoint > .lastLine {
+	text-align: center;
+	/* background-color: aqua; */
+}
+.icon {
+	margin-right: 10px;
+}
+.keypoint > .topLine {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/* justify-content: space-around; */
+	color: #f70b42;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px;
+	padding-bottom: 5px;
+}

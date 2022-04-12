@@ -1,0 +1,22 @@
+.heading {
+	display: flex;
+	text-align: center;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.main {
+	font-weight: 600;
+	font-size: 2rem;
+	text-align: center;
+	margin-top: 90px;
+	margin-bottom: 16px;
+	/* max-width: 500px; */
+}
+.subtext {
+	margin-bottom: 48px;
+	font-weight: 400;
+	color: grey;
+	text-align: center;
+}

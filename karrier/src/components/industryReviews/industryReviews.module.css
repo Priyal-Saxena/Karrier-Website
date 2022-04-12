@@ -1,0 +1,32 @@
+.container {
+	/* width: 100vw; */
+	/* height: 100vh; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 8vh;
+	padding-bottom: 0vh;
+	/* background-color: black; */
+}
+
+.container .side {
+	margin-top: 4vh;
+	/* height: 50px; */
+}
+.container .middle {
+	margin-top: -4vh;
+}
+
+@media only screen and (max-width: 670px) {
+	.container {
+		flex-direction: column;
+	}
+	.container .side {
+		margin-top: 0vh;
+		/* height: 50px; */
+	}
+	.container .middle {
+		margin-top: 0vh;
+	}
+}

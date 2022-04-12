@@ -1,0 +1,32 @@
+.teamSection {
+	height: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(180deg, rgba(214, 214, 214, 0.863) 59.5%, white 59.5%);
+	/* background: linear-gradient(180deg, #fdcd3b 20%, #4bffc9 20%); */
+}
+.cards {
+	padding: 2.5vh 3vw;
+	padding-bottom: 10vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.bottomCard {
+	/* margin-top: 40px; */
+}
+/* .bottomCard1 {
+	margin-left: 14vw;
+	margin-top: 40px;
+}
+.bottomCard2 {
+	margin-right: 14vw;
+	margin-top: 40px;
+} */

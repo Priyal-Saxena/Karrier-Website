@@ -1,0 +1,133 @@
+.person {
+	color: rgb(255, 255, 255);
+	margin: 10px 0;
+	padding: 20px 20px;
+	display: flex;
+	max-width: 600px;
+	max-height: 450px;
+	text-align: left;
+	background-position: top left;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+	-moz-box-shadow: 0 10px 50px rgba(122, 125, 129, 0.4);
+	-webkit-box-shadow: 0 10px 50px rgba(122, 125, 129, 0.4);
+	box-shadow: 0 10px 50px rgba(122, 125, 129, 0.4);
+}
+.person:before {
+	content: "";
+	position: absolute;
+	right: -10%;
+	top: 0;
+	bottom: -60%;
+	transform: rotate(45deg);
+	background-color: rgba(255, 255, 255, 0.1);
+	z-index: 3;
+	margin-right: 60px;
+}
+.person.hrvoje {
+	background-color: #e88f75;
+}
+.person.hrvoje .image {
+	background-image: url(http://static.degordian.com/employees/hrvoje_grubisic.jpg);
+	background-color: #e88f75;
+}
+.person.marko {
+	background-color: #fd6b76;
+	margin-left: 60px;
+}
+.person.marko .image {
+	background-image: url(http://static.degordian.com/employees/marko_cvijetic.jpg);
+	background-color: #fd6b76;
+}
+.person.maki {
+	background-color: #5d85b4;
+	margin-right: 60px;
+}
+.person.maki .image {
+	background-image: url(http://static.degordian.com/employees/mario_sestak.jpg);
+	background-color: #5d85b4;
+}
+.person.sime {
+	background-color: #76d39e;
+	margin-left: 60px;
+}
+.person.sime .image {
+	background-image: url(http://static.degordian.com/employees/mario_simic.jpg);
+	background-color: #76d39e;
+}
+.person.zembo {
+	background-color: #8b539a;
+	margin-right: 60px;
+}
+.person.zembo .image {
+	background-image: url(http://static.degordian.com/employees/hrvoje_dominko.png);
+	background-color: #8b539a;
+}
+
+.links {
+	position: absolute;
+	right: 4%;
+	font-family: Arial, serif, sans-serif;
+	top: 7.5%;
+	z-index: 3;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 12px;
+	font-weight: bold;
+	transform: translate3d(0, 0, 0);
+}
+.links a {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 30px;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.6);
+	-webkit-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-khtml-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-moz-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-ms-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-o-transition: all, 0.2s, ease-in 1s ease-in-out;
+	transition: all, 0.2s, ease-in 1s ease-in-out;
+}
+.links a:hover {
+	color: white;
+}
+
+.meta {
+	left: 8%;
+	right: 8%;
+	top: 9%;
+	bottom: 13%;
+	transform: translate3d(0, 0, 0);
+	z-index: 3;
+}
+.meta h4 {
+	top: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: bold;
+	font-size: 48px;
+	word-spacing: 800px;
+}
+.meta p {
+	font-family: Arial, serif, sans-serif;
+	bottom: 0;
+	font-size: 15px;
+	line-height: 1.4em;
+}
+
+.image {
+	float: right;
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+	margin-top: 120px;
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: lighten;
+}
