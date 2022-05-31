@@ -1,12 +1,12 @@
 .courseCard {
-	width: 23vw;
+	width: 25vw;
 	height: 90vh;
 	min-width: 280px;
 	/* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
 	/* border-radius: 1em; */
 	/* overflow: hidden; */
 	position: relative;
-	margin: 8vh !important;
+	margin: 6.5vh !important;
 }
 
 @media only screen and (max-width: 800px) {

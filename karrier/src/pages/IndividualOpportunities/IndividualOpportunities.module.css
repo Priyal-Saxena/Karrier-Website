@@ -1,0 +1,81 @@
+.oppPage {
+	padding: 8vw;
+	background-color: white;
+}
+.card {
+	background-color: #fdfdfd;
+	border: 1px #ededed;
+	box-shadow: 0px 4px 20px 4px #5d796d1a;
+	margin: 7vh 0;
+	border-radius: 16px;
+	/* margin-right: 0 !important; */
+}
+.header {
+	width: 100%;
+	min-height: 24vh;
+	display: flex;
+	flex-direction: row;
+	/* justify-content: center; */
+	align-items: center;
+}
+.headerAvatar {
+	margin: 0 8vh;
+}
+.headerText {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* text-align: left; */
+	/* background-color: aqua; */
+}
+.pageContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.rightBar {
+	display: flex;
+	flex-direction: column;
+	margin-left: 2vh;
+}
+.row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	/* justify-content: flex-end; */
+	/* background-color: antiquewhite; */
+}
+.smallCard {
+	padding: 2vh;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2vh;
+}
+.longCard {
+	padding: 2vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2vh;
+}
+.table {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.table div p {
+	margin: 6px 0;
+}
+.tableCol {
+	width: 75%;
+}

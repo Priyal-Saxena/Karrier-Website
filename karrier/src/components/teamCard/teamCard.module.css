@@ -158,102 +158,121 @@
 	text-align: center;
 }
 /* ////////////////////////////////////////// */
-/* html {
-	box-sizing: border-box;
-	background: #f3f3f3;
-  }
-  
-  *,
-  *:after,
-  *:before {
-	box-sizing: inherit;
-  }
-   */
-.clip {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
+a:hover {
+	color: #d9d9d9;
+	text-decoration: underline;
+}
+.socialIcons {
 	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-.svgSource {
-	display: none;
-}
-
-.svgIcon {
-	width: 100%;
-	max-width: 5rem;
-	height: 100%;
-	max-height: 5rem;
-	display: block;
-	margin: 0 auto;
-	fill: currentColor;
-}
-
-.wrapper {
-	width: 100%;
-	height: 100vh;
+	list-style: none;
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	padding: 1rem;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+}
+.socials {
+	/* width: 350px; */
+	display: block;
+	/* margin: 0 auto; */
+}
+.socialIcon {
+	color: #fff;
 }
 
-.share {
-	width: 5rem;
-	height: 5rem;
-	float: left;
-	margin: 0.5rem 1rem 0.5rem 0;
-	color: #353c4a;
-	border: 0.125rem solid #f3f3f3;
-	box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
-	border-radius: 50%;
-	transition: 250ms;
+ul.socialIcons {
+	/* margin-top: 10px; */
 }
-.share:last-child {
-	margin-right: 0;
+.socialIcons li {
+	vertical-align: top;
+	display: inline;
+	height: 100px;
 }
-.share:focus {
-	outline-color: inherit;
+.socialIcons a {
+	color: #fff;
+	text-decoration: none;
 }
 
-.twitter:hover,
-.twitter:focus {
-	color: #00aced;
-	box-shadow: 0 0 24px 0 #00aced;
+.facebook {
+	padding: 10px 14px;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	background-color: #322f30;
 }
-
-.github:hover,
-.github:focus {
-	color: #4183c4;
-	box-shadow: 0 0 24px 0 #4183c4;
+.facebook:hover {
+	background-color: #3d5b99;
 }
-
-.pinterest:hover,
-.pinterest:focus {
-	color: #bd081c;
-	box-shadow: 0 0 24px 0 #bd081c;
+.twitter {
+	padding: 10px 12px;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	/* background-color: #322f30; */
 }
-
-.youtube:hover,
-.youtube:focus {
-	color: #cd201f;
-	box-shadow: 0 0 24px 0 #cd201f;
+.twitter:hover {
+	background-color: #00aced;
 }
-
-.facebook:hover,
-.facebook:focus {
-	color: #3b5998;
-	box-shadow: 0 0 24px 0 #3b5998;
+.rss {
+	padding: 10px 14px;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	/* background-color: #322f30; */
 }
-
-.google:hover,
-.google:focus {
-	color: #dd4b39;
-	box-shadow: 0 0 24px 0 #dd4b39;
+.rss:hover {
+	background-color: #eb8231;
+}
+.youtube {
+	padding: 10px 14px;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	/* background-color: #322f30; */
+}
+.youtube:hover {
+	background-color: #e64a41;
+}
+.linkedin {
+	padding: 10px 14px;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	/* background-color: #322f30; */
+}
+.linkedin:hover {
+	background-color: #0073a4;
+}
+.instagram {
+	padding: 10px 14px;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	/* background-color: #322f30; */
+}
+.instagram:hover {
+	background-color: #8a3ab9;
+}
+.github {
+	padding: 10px 14px;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	/* background-color: #322f30; */
+}
+.github:hover {
+	background-color: #5a32a3;
 }

@@ -18,6 +18,8 @@ import Gallery from "./pages/Gallery/index";
 // import Projects from './pages/Projects/index';
 // import Team from './pages/Team/index';
 import ViewportProvider from "./viewport";
+import IndividualOpportunity from "./pages/IndividualOpportunities/index";
+import Buttons from "./pages/IndividualOpportunities/icons";
 
 class App extends Component {
 	componentDidMount() {
@@ -27,14 +29,15 @@ class App extends Component {
 		return (
 			<ViewportProvider>
 				<Router>
-					<Navbar />
+					{/* <Navbar /> */}
 					<div className="pages">
 						<Routes>
 							<Route exact path="/" element={<Home />} />
+							{/* <Route exact path="/" element={<Buttons />} /> */}
+							{/* <Route exact path="/" element={<IndividualOpportunity />} /> */}
 
-							{/* <Route path="/About" element={<About />} /> */}
 							<Route path="/Gallery" element={<Gallery />} />
-							{/* <Route path="/Team" element={<Team />} /> */}
+
 							<Route path="/For%20Students" element={<ForStudents />} />
 							<Route path="/For%20Corporate" element={<ForCorporate />} />
 							<Route path="/For%20Institutes" element={<ForInstitutes />} />

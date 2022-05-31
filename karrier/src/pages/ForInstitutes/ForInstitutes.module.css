@@ -103,12 +103,18 @@
 	display: flex;
 	flex-direction: row;
 	width: 80%;
-	max-width: 800px;
+	max-width: 1000px;
 	justify-content: space-between;
 	padding-top: 5vh;
 }
 .featureCol {
 	text-align: center;
+	padding: 2vh 1vw;
+}
+.featureCol li {
+	text-align: left;
+	padding: 10px;
+	font-size: 18px;
 }
 .featuresHeading {
 	font-size: 1.3rem;

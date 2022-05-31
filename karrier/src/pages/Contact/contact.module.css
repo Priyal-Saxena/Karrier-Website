@@ -40,19 +40,37 @@ textarea {
 	max-width: 800px;
 	margin: auto;
 	position: relative;
-	background-color: grey;
+	background-color: rgba(58, 41, 41, 0.454);
 	font-family: "Montserrat", Arial, sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	padding: 60px;
-	border-radius: 2em;
+	border-radius: 1em;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	/* background-clip: padding-box; */
 }
 
 form {
-	padding: 37.5px;
+	padding: 4vh 4vw;
 	margin: 50px 0;
 	margin-bottom: 0;
+}
+@media screen and (max-width: 530px) {
+	.container {
+		padding: 2vh 2vw;
+	}
+	form {
+		padding: 2vh 3vw;
+		margin: 25px 0;
+		margin-bottom: 0;
+	}
 }
 
 h1 {
@@ -83,16 +101,11 @@ h1 {
 	width: 50px;
 }
 
-.email {
-	float: right;
-	width: 45%;
-}
-
 input[type="text"],
 [type="email"],
 select,
 textarea {
-	background: #19282b96;
+	background: #2b221996;
 	border: none;
 	border-bottom: solid 2px #c0bdbb;
 	color: #ffffff;
@@ -125,13 +138,25 @@ textarea:focus {
 	padding: 20px;
 }
 
+.name {
+	width: 100%;
+}
+.email {
+	width: 100%;
+}
 .message {
 	float: none;
 }
 
-.name {
-	float: left;
-	width: 45%;
+@media screen and (min-width: 530px) {
+	.name {
+		float: left;
+		width: 45%;
+	}
+	.email {
+		float: right;
+		width: 45%;
+	}
 }
 
 select {
@@ -179,7 +204,7 @@ textarea {
 	color: #474544;
 }
 
-#form_button {
+/* #form_button {
 	background: none;
 	border: solid 2px #474544;
 	color: #474544;
@@ -201,7 +226,7 @@ textarea {
 #form_button:hover {
 	background: #474544;
 	color: #f2f3eb;
-}
+} */
 
 @media screen and (max-width: 768px) {
 	#container {
@@ -254,4 +279,61 @@ label {
 	-webkit-transition: all 0.25s ease;
 	transition: all 0.25s ease;
 	pointer-events: none;
+}
+
+/* BUTTON */
+.submit {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* CSS */
+
+/* CSS */
+.button {
+	align-items: center;
+	background-color: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 0.25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	color: rgba(0, 0, 0, 0.85);
+	cursor: pointer;
+	display: inline-flex;
+	font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+}
+
+.button:hover,
+.button:focus {
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+	color: rgba(0, 0, 0, 0.65);
+}
+
+.button:hover {
+	transform: translateY(-1px);
+}
+
+.button:active {
+	background-color: #f0f0f1;
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+	color: rgba(0, 0, 0, 0.65);
+	transform: translateY(0);
 }

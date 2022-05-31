@@ -12,9 +12,9 @@ function Team() {
 				<TeamCard />
 				<TeamCard />
 				<TeamCard />
-				<div className={styles.bottomCard}>
+				{/* <div className={styles.bottomCard}>
 					<TeamCard />
-				</div>
+				</div> */}
 				{/* <div className={styles.bottomCard1}>
 					<TeamCard />
 				</div> */}

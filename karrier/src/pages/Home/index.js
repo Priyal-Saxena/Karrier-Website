@@ -19,6 +19,8 @@ import Team from "../../components/team/index";
 // import Slider from "../../components/slider";
 // import About from "../About/index";
 // import Contact from "../Contact/index";
+import { ReactComponent as Illustration1 } from "../../assets/illustrations/Illustration1.svg";
+import { ReactComponent as Illustration2 } from "../../assets/illustrations/Illustration2.svg";
 
 function Home() {
 	return (
@@ -47,7 +49,7 @@ function Home() {
 				}}
 			>
 				<div className={styles.onlineContainerRow}>
-					<div
+					{/* <div
 						className={styles.onlineImg}
 						style={{
 							backgroundImage: `url(${onlineClasses})`,
@@ -55,7 +57,10 @@ function Home() {
 							backgroundSize: "cover",
 							backgroundRepeat: "no-repeat",
 						}}
-					></div>
+					></div> */}
+
+					<Illustration1 className={styles.onlineSVG} />
+
 					<div className={styles.onlineClassInfo}>
 						<h2>Introducing Online classes</h2>
 						<p>
@@ -74,7 +79,7 @@ function Home() {
 							mollit anim id est laborum.
 						</p>
 					</div>
-					<div
+					{/* <div
 						className={styles.onlineImg}
 						style={{
 							backgroundImage: `url(${onlineClasses})`,
@@ -82,10 +87,14 @@ function Home() {
 							backgroundSize: "cover",
 							backgroundRepeat: "no-repeat",
 						}}
-					></div>
+					></div> */}
+					<Illustration2 className={styles.onlineSVG} />
 				</div>
 			</section>
-
+			<section className={styles.industryReviews}>
+				<Heading main="Reviews" subtext="what does industry say about us" />
+				<IndustryReviews />
+			</section>
 			<section className={styles.achievements}>
 				<Heading main="Achievements" subtext="our achievements" />
 				<Achievements />
@@ -93,17 +102,9 @@ function Home() {
 				<p> insert list of Achievements/awards</p> */}
 			</section>
 
-			<section className={styles.features}>
+			{/* <section className={styles.features}>
 				<Features />
-			</section>
-			<section className={styles.industryReviews}>
-				<Heading main="Reviews" subtext="what does industry say about us" />
-				<IndustryReviews />
-			</section>
-			<section className={styles.faqs}>
-				<Heading main="FAQs" subtext="Common questions that people have" />
-				<FAQ />
-			</section>
+			</section> */}
 
 			<section>
 				{/* <PlacedStudents /> */}
@@ -113,6 +114,10 @@ function Home() {
 				transforming Fresh graduates into trained pharma professionals through specialized, high quality
 				education & skill development programs."
 				/>
+			</section>
+			<section className={styles.faqs}>
+				<Heading main="FAQs" subtext="Common questions that people have" />
+				<FAQ />
 			</section>
 		</section>
 	);

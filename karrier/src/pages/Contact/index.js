@@ -1,9 +1,18 @@
 import React from "react";
 import styles from "./contact.module.css";
+import ContactImg from "../../assets/contact.jpg";
 
 function Contact() {
 	return (
-		<div className={styles.outerContainer}>
+		<div
+			className={styles.outerContainer}
+			style={{
+				backgroundImage: `url(${ContactImg})`,
+				backgroundPosition: "center",
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
 			<div className={styles.container}>
 				<h1>Contact Us</h1>
 				<div className={styles.icon_wrapper}></div>
@@ -48,9 +57,12 @@ function Contact() {
 							required
 						></textarea>
 					</div>
-					<div class="submit">
-						<input type="submit" value="Send Message" className={styles.form_button} />
+					<div className={styles.submit}>
+						<input type="submit" value="Send Message" className={`${styles.form_button} ${styles.button}`} />
 					</div>
+					{/* <button class="button-48" role="button">
+						<span class="text">Button 48</span>
+					</button> */}
 				</form>
 			</div>
 		</div>

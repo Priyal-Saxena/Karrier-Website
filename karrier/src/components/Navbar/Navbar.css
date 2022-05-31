@@ -52,6 +52,8 @@
 }
 
 .navbar_link:hover {
+	text-decoration: none;
+
 	/* padding: 5px 5px; */
 	/* border-radius: 15px;
 	box-shadow: rgba(33, 23, 53, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
