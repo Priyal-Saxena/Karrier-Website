@@ -14,7 +14,7 @@ function Quote(props) {
 					<cite>
 						{/* <span>Kristi Bruno</span>
 						<br /> */}
-						~ first last
+						~ Carnegie Institute of Technology
 						{/* <br />
 						occupation */}
 					</cite>

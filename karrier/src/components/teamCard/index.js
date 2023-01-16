@@ -7,15 +7,15 @@ import "./socialIcons.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { FaFacebookF } from "react-icons/fa";
 
-function TeamCard() {
+function TeamCard(props) {
 	return (
 		<div className={styles.outerCard}>
 			<div className={`${styles.card} ${styles.slideDown}`}>
 				<figure className={styles.front}>
-					<img src={tieSuit} className={styles.circleImg} />
+					<img src={props.src} className={styles.circleImg} />
 					<div className={styles.text}>
-						<h5>name surname</h5>
-						<p>role in company</p>
+						<h5>{props.name}</h5>
+						<p>{props.role}</p>
 					</div>
 				</figure>
 				<figure
@@ -29,12 +29,9 @@ function TeamCard() {
 				>
 					<div className={styles.back}>
 						<div className={styles.dropdownText}>
-							<h5>First Last</h5>
-							<p className={styles.title}>Developer</p>
-							<div className={styles.bio}>
-								Lorem ipsum dolor sit amet, conectetur adipiscing elit. Cras vitae nibh eget urna ette
-								condimentum convallis.
-							</div>
+							<h5>{props.name}</h5>
+							<p className={styles.title}>{props.role}</p>
+							<div className={styles.bio}>{props.description}</div>
 						</div>
 						<div className={styles.social}></div>
 					</div>
@@ -43,48 +40,21 @@ function TeamCard() {
 			<div className={styles.socials}>
 				<ul className={styles.socialIcons}>
 					<li>
-						<a href="" className={styles.socialIcon}>
-							{/* <FontAwesomeIcon icon="fa-brands fa-react" /> */}
-							{/* <FaFacebookF /> */}
+						<a href={props.fb} className={styles.socialIcon}>
 							<i className={`${styles.fa} ${styles.facebook}`} class="fa fa-facebook facebook"></i>
 						</a>
 					</li>
-					{/* <li>
-						<a href="" className={styles.socialIcon}>
-							{" "}
-							<i className={`${styles.fa} ${styles.twitter}`} class="fa fa-twitter twitter"></i>
-						</a>
-					</li> */}
-					{/* <li>
-						<a href="" className={styles.socialIcon}>
-							{" "}
-							<i className={`${styles.fa} ${styles.rss}`} class="fa fa-rss rss"></i>
-						</a>
-					</li> */}
-					{/* <li>
-						<a href="" className={styles.socialIcon}>
-							{" "}
-							<i className={`${styles.fa} ${styles.youtube}`} class="fa fa-youtube youtube"></i>
-						</a>
-					</li> */}
+
 					<li>
-						<a href="" className={styles.socialIcon}>
-							{" "}
+						<a href={props.linkedIn} className={styles.socialIcon}>
 							<i className={`${styles.fa} ${styles.linkedin}`} class="fa fa-linkedin linkedin"></i>
 						</a>
 					</li>
 					<li>
-						<a href="" className={styles.socialIcon}>
-							{" "}
+						<a href={props.insta} className={styles.socialIcon}>
 							<i className={`${styles.fa} ${styles.instagram}`} class="fa fa-instagram instagram icon-2x"></i>
 						</a>
 					</li>
-					{/* <li>
-						<a href="" className={styles.socialIcon}>
-							{" "}
-							<i className={`${styles.fa} ${styles.github}`} class="fa fa-github github"></i>
-						</a>
-					</li> */}
 				</ul>
 			</div>
 		</div>

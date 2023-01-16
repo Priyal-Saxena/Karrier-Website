@@ -7,7 +7,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import tieSuit from "../../assets/tieSuit.jpg";
 import { positions } from "@mui/system";
 import Button from "@mui/material/Button";
 
@@ -49,12 +48,12 @@ function CourseCard(props) {
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
-	const { eligibilityPoints, curriculumPoints, mode, duration, cost } = props;
+	const { eligibilityPoints, curriculumPoints, mode, duration, cost, name, src } = props;
 	return (
 		<div className={styles.courseCardCol}>
 			<div className={styles.courseCard}>
 				<div className={styles.imageContainer}>
-					<img src={tieSuit} />
+					<img src={src} />
 				</div>
 
 				<div className={styles.cardInfo}>
@@ -71,23 +70,18 @@ function CourseCard(props) {
 								variant="fullWidth"
 								// aria-label="basic tabs example"
 							>
-								<Tab wrapped label="Item One" {...a11yProps(0)} />
-								<Tab wrapped label="Item Two" {...a11yProps(1)} />
+								<Tab wrapped label="Details" {...a11yProps(0)} />
+								<Tab wrapped label="Curriculum" {...a11yProps(1)} />
 								{/* <Tab label="Item Three" {...a11yProps(2)} /> */}
 							</Tabs>
 						</Box>
+
 						<TabPanel value={value} index={0}>
 							<div class={styles.text}>
-								<p class={styles.listTitle}>Curriculum</p>
-								<ul class={styles.points}>
-									{curriculumPoints.map(point => (
-										<li class={styles.point}>{point}</li>
-									))}
-								</ul>
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={1}>
-							<div class={styles.text}>
+								<p>
+									<span class={styles.title}>Course Name:</span>
+									{name}
+								</p>
 								<p class={styles.listTitle}>Eligibility</p>
 								<ul class={styles.points}>
 									{eligibilityPoints.map(point => (
@@ -110,15 +104,31 @@ function CourseCard(props) {
 								</p>
 							</div>
 						</TabPanel>
+						<TabPanel value={value} index={1}>
+							<div class={styles.text}>
+								<p class={styles.listTitle}>Curriculum</p>
+								<ul class={styles.points}>
+									{curriculumPoints.map(point => (
+										<li class={styles.point}>{point}</li>
+									))}
+								</ul>
+							</div>
+						</TabPanel>
 						{/* <TabPanel value={value} index={2}>
 					Item Three
 				</TabPanel> */}
 					</Box>
 				</div>
 			</div>
-			<Button class={styles.btn} variant="contained" href="#contained-buttons">
+
+			<div className={styles.submit}>
+				<a href="https://forms.gle/2dhkrDQupJxyV8df8">
+					<input type="submit" value="Free Demo Class" className={`${styles.form_button} ${styles.button}`} />
+				</a>
+			</div>
+			{/* <Button class={styles.btn} variant="contained" href="#contained-buttons">
 				Link
-			</Button>
+			</Button> */}
 		</div>
 	);
 }

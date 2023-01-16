@@ -1,39 +1,68 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import Panel from "./panel";
-import Carousel, { Dots } from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
+import React, { useState, useEffect } from "react";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import { FaQuoteRight } from "react-icons/fa";
+// import data from "./data";
+import "./slider.css";
+function Reviews(props) {
+	const [people, setPeople] = useState(props.data);
+	const [index, setIndex] = React.useState(0);
 
-// import "./reviews.css";
-// import styles from "./reviews.styled.jsx";
-import { StyledCarousel } from "./reviews.styled.jsx";
-// import { StyledCarousel } from "./carousel.styled.jsx";
+	useEffect(() => {
+		const lastIndex = people.length - 1;
+		if (index < 0) {
+			setIndex(lastIndex);
+		}
+		if (index > lastIndex) {
+			setIndex(0);
+		}
+	}, [index, people]);
 
-function Reviews() {
-	const [value, setValue] = useState(0);
-	function onChange(value) {
-		setValue(value);
-	}
+	useEffect(() => {
+		let slider = setInterval(() => {
+			setIndex(index + 1);
+		}, 5000);
+		return () => {
+			clearInterval(slider);
+		};
+	}, [index]);
+	let id = 0;
 	return (
-		<div>
-			{/* <div className={styles.container}> */}
-			<StyledCarousel
-				plugins={["arrows"]}
-				value={value}
-				onChange={onChange}
-				arrows
-				infinite
-				slidesPerPage={1}
-			>
-				<Panel />
-				<Panel />
-				<Panel />
-				<Panel />
-				<Panel />
-				<Panel />
-			</StyledCarousel>
-			<Dots value={value} onChange={onChange} number={6} />
-		</div>
+		<section className="review section">
+			{/* <div className="title">
+				<h2>
+					<span>/</span>reviews
+				</h2>
+			</div> */}
+			<div className="section-center">
+				{people.map((person, personIndex) => {
+					const { name, designation, review, src } = person;
+
+					let position = "nextSlide";
+					if (personIndex === index) {
+						position = "activeSlide";
+					}
+					if (personIndex === index - 1 || (index === 0 && personIndex === people.length - 1)) {
+						position = "lastSlide";
+					}
+
+					return (
+						<article className={position} key={id++}>
+							<img src={src} alt={name} className="person-img" />
+							<h4>{name}</h4>
+							<p className="title">{designation}</p>
+							<p className="text">{review}</p>
+							<FaQuoteRight className="icon" />
+						</article>
+					);
+				})}
+				<button className="prev" onClick={() => setIndex(index - 1)}>
+					<FiChevronLeft />
+				</button>
+				<button className="next" onClick={() => setIndex(index + 1)}>
+					<FiChevronRight />
+				</button>
+			</div>
+		</section>
 	);
 }
 

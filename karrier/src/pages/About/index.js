@@ -1,11 +1,14 @@
 import React from "react";
+import FAQ from "../../components/faq";
+import Heading from "../../components/heading";
+
 import PlacedStudents from "../../components/placedStudents";
 import Quote from "../../components/quote";
-import "./About.css";
+import styles from "./About.module.css";
 
 function About() {
 	return (
-		<section className="mainContainer">
+		<section className={styles.mainContainer}>
 			<PlacedStudents />
 			<Quote
 				quote="Karrier Institute is a Concept more than Business started in the year 2015 with a clear cut vision of
@@ -29,6 +32,10 @@ function About() {
 			</p>
 			<h2>Values</h2>
 			<p>Respect for all individual at each level Integrity-a way of life in karrier</p>
+			{/* <section className={styles.faqs}>
+				<Heading main="FAQs" subtext="Common questions that people have" />
+				<FAQ />
+			</section> */}
 		</section>
 	);
 }

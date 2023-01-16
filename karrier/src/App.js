@@ -1,25 +1,18 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import Footer from "./Components/Footer/index";
-// import Navbar from "./Components/Navbar/index";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
-// import About from "./pages/About/index";
 import Home from "./pages/Home/index";
-// import Team from "./pages/Team/index";
 import Contact from "./pages/Contact/index";
-import ForStudents from "./pages/ForStudents/index";
+import Courses from "./pages/Courses/index";
 import ForCorporate from "./pages/ForCorporate/index";
-import ForInstitutes from "./pages/ForInstitutes/index";
+import InternshipProgram from "./pages/InternshipProgram/index";
 import Gallery from "./pages/Gallery/index";
-// import Blogs from './pages/Blogs/index';
-// import Contact from './pages/Contact/index';
-// import Events from './pages/Events/index';
-// import Projects from './pages/Projects/index';
-// import Team from './pages/Team/index';
+import About from "./pages/About/index";
+import MRRole from "./pages/MRRole/index";
+import MRSalary from "./pages/MRSalary/index";
+import "./App.css";
 import ViewportProvider from "./viewport";
-import IndividualOpportunity from "./pages/IndividualOpportunities/index";
-import Buttons from "./pages/IndividualOpportunities/icons";
 
 class App extends Component {
 	componentDidMount() {
@@ -29,36 +22,31 @@ class App extends Component {
 		return (
 			<ViewportProvider>
 				<Router>
-					{/* <Navbar /> */}
+					<Navbar />
+					{/* whatsapp icon */}
+					<a
+						href="https://api.whatsapp.com/message/6GCWXVDROVNTH1?autoload=1&app_absent=0"
+						className="whatsapp_float"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<i class="fa fa-whatsapp whatsapp-icon"></i>
+					</a>
 					<div className="pages">
+						{/* <ScrollToTop> */}
 						<Routes>
 							<Route exact path="/" element={<Home />} />
-							{/* <Route exact path="/" element={<Buttons />} /> */}
-							{/* <Route exact path="/" element={<IndividualOpportunity />} /> */}
-
+							<Route exact path="/jobs-for-fresher" element={<Home />} />
+							<Route path="/role-of-medical-representative" element={<MRRole />} />
+							<Route path="/salary-of-medical-representative" element={<MRSalary />} />
 							<Route path="/Gallery" element={<Gallery />} />
-
-							<Route path="/For%20Students" element={<ForStudents />} />
-							<Route path="/For%20Corporate" element={<ForCorporate />} />
-							<Route path="/For%20Institutes" element={<ForInstitutes />} />
-							<Route path="/Contact" element={<Contact />} />
-
-							{/* <Route path="/Events">
-						<Events />
-					</Route>
-					<Route path="/Team">
-						<Team />
-					</Route>
-					<Route path="/Projects">
-						<Projects />
-					</Route>
-					<Route path="/Blogs">
-						<Blogs />
-					</Route>
-					<Route path="/Contact">
-						<Contact />
-					</Route> */}
+							<Route path="/About" element={<About />} />
+							<Route path="/job-oriented-course-after-graduation" element={<Courses />} />
+							<Route path="/corporate-training" element={<ForCorporate />} />
+							<Route path="/internship" element={<InternshipProgram />} />
+							<Route path="/Contact-Us" element={<Contact />} />
 						</Routes>
+						{/* </ScrollToTop> */}
 					</div>
 					<Footer />
 				</Router>

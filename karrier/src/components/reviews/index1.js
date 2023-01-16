@@ -7,9 +7,8 @@ import "@brainhubeu/react-carousel/lib/style.css";
 // import "./reviews.css";
 // import styles from "./reviews.styled.jsx";
 import { StyledCarousel } from "./reviews.styled.jsx";
-// import { StyledCarousel } from "./carousel.styled.jsx";
 
-function Reviews() {
+function Reviews(props) {
 	const [value, setValue] = useState(0);
 	function onChange(value) {
 		setValue(value);
@@ -17,15 +16,22 @@ function Reviews() {
 	return (
 		<div>
 			{/* <div className={styles.container}> */}
-			<Carousel plugins={["arrows"]} value={value} onChange={onChange} arrows infinite slidesPerPage={1}>
-				<Panel />
-				<Panel />
-				<Panel />
-				<Panel />
-				<Panel />
-				<Panel />
-			</Carousel>
-			<Dots value={value} onChange={onChange} number={6} />
+			<StyledCarousel
+				plugins={["arrows"]}
+				value={value}
+				onChange={onChange}
+				arrows
+				infinite
+				slidesPerPage={1}
+			>
+				{/* {props.data.map(elem => (
+					<img src={elem.src} />
+				))} */}
+				{props.data.map(elem => (
+					<Panel name={elem.name} designation={elem.designation} review={elem.review} src={elem.src} />
+				))}
+			</StyledCarousel>
+			<Dots value={value} onChange={onChange} number={props.data.length} />
 		</div>
 	);
 }

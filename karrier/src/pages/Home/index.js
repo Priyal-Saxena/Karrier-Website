@@ -1,26 +1,20 @@
 import React from "react";
-// import {Typography} from '@material-ui/core'
 import styles from "./home.module.css";
-import smilingGuy from "../../assets/smilingGuy.jpg";
-import hmm from "../../assets/hmm.jpg";
 import background from "../../assets/background.jpg";
-import onlineClasses from "../../assets/onlineClasses.jpg";
-import Reviews from "../../components/reviews/index";
-import FAQ from "../../components/faq";
 import IndustryReviews from "../../components/industryReviews";
-import Hero from "../../components/Hero";
+import Hero from "../../components/Hero2";
 import Keypoints from "../../components/keypoints";
-import Features from "../../components/features";
 import Heading from "../../components/heading";
 import Achievements from "../../components/achievements";
-import PlacedStudents from "../../components/placedStudents";
 import Quote from "../../components/quote";
 import Team from "../../components/team/index";
-// import Slider from "../../components/slider";
-// import About from "../About/index";
-// import Contact from "../Contact/index";
-import { ReactComponent as Illustration1 } from "../../assets/illustrations/Illustration1.svg";
-import { ReactComponent as Illustration2 } from "../../assets/illustrations/Illustration2.svg";
+import NeedJob from "../../assets/home/I need a job.jpg";
+import JobsForFresher from "../../assets/home/jobs for fresher.jpg";
+import JourneySoFar from "../../assets/home/Journey so far.jpg";
+import ChooseUs from "../../components/chooseUs";
+import Info from "../../components/info";
+import FAQ from "../../components/faq";
+// import Heading from "../../components/heading";
 
 function Home() {
 	return (
@@ -38,7 +32,6 @@ function Home() {
 				<Heading main="Reviews" subtext="what do our students say about us" />
 				<Reviews />
 			</section> */}
-
 			<section
 				className={styles.onlineContainer}
 				style={{
@@ -48,48 +41,35 @@ function Home() {
 					backgroundRepeat: "no-repeat",
 				}}
 			>
-				<div className={styles.onlineContainerRow}>
-					{/* <div
-						className={styles.onlineImg}
-						style={{
-							backgroundImage: `url(${onlineClasses})`,
-							backgroundPosition: "center",
-							backgroundSize: "cover",
-							backgroundRepeat: "no-repeat",
-						}}
-					></div> */}
-
-					<Illustration1 className={styles.onlineSVG} />
-
-					<div className={styles.onlineClassInfo}>
-						<h2>Introducing Online classes</h2>
-						<p>
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-							pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-							mollit anim id est laborum.
-						</p>
-					</div>
-				</div>
-				<div className={styles.onlineContainerRow}>
-					<div className={styles.onlineClassInfo}>
-						<h2>Introducing Online classes</h2>
-						<p>
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-							pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-							mollit anim id est laborum.
-						</p>
-					</div>
-					{/* <div
-						className={styles.onlineImg}
-						style={{
-							backgroundImage: `url(${onlineClasses})`,
-							backgroundPosition: "center",
-							backgroundSize: "cover",
-							backgroundRepeat: "no-repeat",
-						}}
-					></div> */}
-					<Illustration2 className={styles.onlineSVG} />
-				</div>
+				<Info
+					data={[
+						{
+							picAlign: "left",
+							src: NeedJob,
+							title: "I need a job",
+							alt: "a young boy sitting in front of laptop in thinking position",
+							heading: "I need a job!",
+							text: "The biggest problem a recent graduate often faces is unemployment. According to Skill India's 2021-22 report, only 46% of graduates were able to get a job.",
+						},
+						{
+							picAlign: "right",
+							src: JobsForFresher,
+							title: "jobs for fresher",
+							alt: "a graduate picking his career option",
+							text: "It's a great thing to have a dream, but sometimes it's difficult to decide what the right thing to do is. Many times students don't know which kind of job suits their interests & requirements, and they are unsure about which industry they should start their career in.",
+						},
+						{
+							picAlign: "left",
+							src: JourneySoFar,
+							title: "Anubhav Saxena - Best Pharma Sales Trainer & Sales Consultant in India",
+							alt: "Anubhav Saxena - Best Pharma Sales Trainer & Sales Consultant in India",
+							text: "faced the same problems you are facing when I was a fresh graduate 27 years back. Hello! I am Anubhav Saxena and I am the founder & director of Karrier Training & Evolution Institute and our mission is to help young graduates facing similar problems to find a career in top pharma companies.",
+						},
+					]}
+				/>
+			</section>
+			<section className={styles.chooseUs}>
+				<ChooseUs />
 			</section>
 			<section className={styles.industryReviews}>
 				<Heading main="Reviews" subtext="what does industry say about us" />
@@ -98,22 +78,11 @@ function Home() {
 			<section className={styles.achievements}>
 				<Heading main="Achievements" subtext="our achievements" />
 				<Achievements />
-				{/* <h1> Achievements</h1>
-				<p> insert list of Achievements/awards</p> */}
 			</section>
 
-			{/* <section className={styles.features}>
-				<Features />
-			</section> */}
-
 			<section>
-				{/* <PlacedStudents /> */}
 				<Team />
-				<Quote
-					quote="Karrier Institute is a Concept more than Business started in the year 2015 with a clear cut vision of
-				transforming Fresh graduates into trained pharma professionals through specialized, high quality
-				education & skill development programs."
-				/>
+				<Quote quote="85% of your financial success is due to your personality and ability to communicate, negotiate, and lead. Shockingly, only 15% is due to technical knowledge." />
 			</section>
 			<section className={styles.faqs}>
 				<Heading main="FAQs" subtext="Common questions that people have" />

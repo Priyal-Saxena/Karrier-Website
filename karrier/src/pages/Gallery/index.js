@@ -6,6 +6,25 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import React, { useLayoutEffect, useState } from "react";
+import tieSuit from "../../assets/tieSuit.jpg";
+import wide1 from "../../assets/gallery/wide1.jpg";
+import wide2 from "../../assets/gallery/wide2.jpg";
+import wide3 from "../../assets/gallery/wide3.jpg";
+import wide4 from "../../assets/gallery/wide4.jpg";
+import wide5 from "../../assets/gallery/wide5.jpg";
+import wide6 from "../../assets/gallery/wide6.jpg";
+import wide7 from "../../assets/gallery/wide7.jpg";
+import wide8 from "../../assets/gallery/wide8.jpg";
+import wide9 from "../../assets/gallery/wide9.jpg";
+import wide10 from "../../assets/gallery/wide10.jpg";
+import wide11 from "../../assets/gallery/wide11.jpg";
+import square1 from "../../assets/gallery/square1.jpg";
+import square2 from "../../assets/gallery/square2.jpg";
+import square3 from "../../assets/gallery/square3.jpg";
+import tall1 from "../../assets/gallery/tall1.jpg";
+import tall2 from "../../assets/gallery/tall2.jpg";
+import tall3 from "../../assets/gallery/tall3.jpg";
+import tall4 from "../../assets/gallery/tall4.jpg";
 
 function useWindowSize() {
 	const [size, setSize] = useState([0, 0]);
@@ -58,7 +77,7 @@ function Gallery() {
 							alt={item.title}
 							loading="lazy"
 						/>
-						<ImageListItemBar
+						{/* <ImageListItemBar
 							className={styles.listItemBar}
 							title={item.title}
 							subtitle={item.author}
@@ -70,7 +89,7 @@ function Gallery() {
 									<InfoIcon />
 								</IconButton>
 							}
-						/>
+						/> */}
 					</ImageListItem>
 				))}
 			</ImageList>
@@ -81,61 +100,113 @@ function Gallery() {
 const itemData = [
 	{
 		img: "https://res.cloudinary.com/def4bqkxv/image/upload/v1643440468/karrier/KarrierAssets/InstituteActivities/VIRACARE_PHARMA_w1eefy.jpg",
-
 		title: "Breakfast",
 		rows: 2,
 		cols: 2,
 	},
 	{
-		img: "https://res.cloudinary.com/def4bqkxv/image/upload/v1643440478/karrier/KarrierAssets/InstituteActivities/Rafflesia_Life_Sciences_Training_Seesion_zrkhmg.jpg",
-		title: "Burger",
+		img: wide10,
+		title: "Tomato basil",
+		cols: 2,
 	},
+	// {
+	// 	img: "https://res.cloudinary.com/def4bqkxv/image/upload/v1643440478/karrier/KarrierAssets/InstituteActivities/CHITKARA_dflzbx.jpg",
+	// 	title: "Camera",
+	// },
+
 	{
-		img: "https://res.cloudinary.com/def4bqkxv/image/upload/v1643440478/karrier/KarrierAssets/InstituteActivities/CHITKARA_dflzbx.jpg",
-		title: "Camera",
-	},
-	{
-		img: "https://res.cloudinary.com/def4bqkxv/image/upload/v1643440479/karrier/KarrierAssets/InstituteActivities/Institute_Pic_ne5tvq.jpg",
-		title: "Coffee",
+		img: wide9,
+		title: "Tomato basil",
 		cols: 2,
 	},
 	{
-		img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+		img: wide1,
 		title: "Hats",
 		cols: 2,
 	},
 	{
-		img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+		img: tall1,
 		title: "Honey",
 		author: "@arwinneil",
 		rows: 2,
 		cols: 2,
 	},
 	{
-		img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+		img: square2,
 		title: "Basketball",
 	},
 	{
-		img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+		img: square1,
 		title: "Fern",
 	},
 	{
-		img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+		img: tall3,
 		title: "Mushrooms",
 		rows: 2,
 		cols: 2,
 	},
 	{
-		img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+		img: tall2,
+		title: "Mushrooms",
+	},
+
+	{
+		img: wide6,
 		title: "Tomato basil",
 	},
+
+	// {
+	// 	img: square3,
+	// 	title: "Tomato basil",
+	// },
+
 	{
-		img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-		title: "Sea star",
+		img: wide3,
+		title: "Bike",
+		cols: 2,
+	},
+
+	{
+		img: wide4,
+		title: "Mushrooms",
+		cols: 2,
 	},
 	{
-		img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+		img: wide5,
 		title: "Bike",
+		cols: 2,
+	},
+	{
+		img: tall4,
+		title: "Sea star",
+		rows: 2,
+		cols: 2,
+	},
+	{
+		img: "https://res.cloudinary.com/def4bqkxv/image/upload/v1643440478/karrier/KarrierAssets/InstituteActivities/Rafflesia_Life_Sciences_Training_Seesion_zrkhmg.jpg",
+		title: "Burger",
+		cols: 2,
+		rows: 2,
+	},
+	{
+		img: wide7,
+		title: "Tomato basil",
+		cols: 2,
+	},
+	{
+		img: wide8,
+		title: "Tomato basil",
+		cols: 2,
+	},
+
+	{
+		img: "https://res.cloudinary.com/def4bqkxv/image/upload/v1643440479/karrier/KarrierAssets/InstituteActivities/Institute_Pic_ne5tvq.jpg",
+		title: "Coffee",
+		cols: 2,
+	},
+	{
+		img: wide11,
+		title: "Tomato basil",
 		cols: 2,
 	},
 ];

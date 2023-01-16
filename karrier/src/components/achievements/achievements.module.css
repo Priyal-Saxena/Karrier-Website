@@ -38,10 +38,19 @@
 
 .card {
 	position: sticky;
-	top: 0;
+	top: 12vw;
 	padding-top: calc(var(--index) * var(--card-top-offset));
 }
-
+@media only screen and (max-width: 900px) {
+	.card {
+		top: 30vw;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.card {
+		top: 60vw;
+	}
+}
 @supports (animation-timeline: works) {
 	@scroll-timeline cards-element-scrolls-in-body {
 		source: selector(body);

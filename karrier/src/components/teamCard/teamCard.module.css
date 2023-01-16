@@ -17,6 +17,9 @@
 	width: 100%;
 	overflow: hidden;
 	background: linear-gradient(180deg, rgba(128, 179, 209, 0.863) 50%, white 50%);
+	background: linear-gradient(180deg, #f70b42 50%, white 50%);
+	background: linear-gradient(180deg, #003388 50%, white 50%);
+	background: linear-gradient(180deg, #60a9ff 50%, white 50%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -108,7 +111,7 @@
 .card h5 {
 	padding-top: 16px;
 	font-size: 22px;
-	line-height: 2.2vw;
+	/* line-height: 2.2vw; */
 }
 .slideDown .back .title {
 	padding-bottom: 0.8vw;
@@ -116,8 +119,8 @@
 }
 .slideDown .back .bio {
 	padding-bottom: 1vw;
-	font-size: 1vw;
-	line-height: 1.3vw;
+	font-size: 1em;
+	line-height: 1.3em;
 }
 .slideDown .back .social {
 	width: 100%;

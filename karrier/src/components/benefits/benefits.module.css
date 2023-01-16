@@ -1,0 +1,166 @@
+/* html {
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+} */
+
+.background {
+	padding: 0 25px 25px;
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.background::after {
+	content: "";
+	/* first */
+	background: #60a9ff;
+	background: -moz-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
+	background: -webkit-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
+	background: linear-gradient(to bottom, #60a9ff 0%, #4394f4 100%);
+	/* second */
+	background-color: #0055aa;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23ffffff' fill-opacity='0.58'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	/* third */
+	background-color: #0055aa;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a9ff', endColorstr='#4394f4',GradientType=0 );
+	height: 350px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+@media (min-width: 900px) {
+	.background {
+		padding: 0 0 25px;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 50px 0 0;
+	max-width: 1100px;
+	width: 100%;
+}
+
+.panel {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 15px 25px;
+	position: relative;
+	width: 100%;
+	z-index: 10;
+}
+
+.pricingTable {
+	box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09),
+		0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 900px) {
+	.pricingTable {
+		flex-direction: row;
+	}
+}
+
+.pricingTable * {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.pricingPlan {
+	border-bottom: 1px solid #e1f1ff;
+	padding: 25px;
+}
+
+.pricingPlan:last-child {
+	border-bottom: none;
+}
+
+@media (min-width: 900px) {
+	.pricingPlan {
+		border-bottom: none;
+		border-right: 1px solid #e1f1ff;
+		flex-basis: 100%;
+		padding: 25px 50px;
+	}
+
+	.pricingPlan:last-child {
+		border-right: none;
+	}
+}
+
+.pricingImg {
+	margin-bottom: 25px;
+	max-width: 100%;
+}
+
+.pricingHeader {
+	color: #888;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.pricingFeatures {
+	color: #016ff9;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin: 50px 0 25px;
+}
+
+.pricingFeaturesItem {
+	border-top: 1px solid #e1f1ff;
+	font-size: 12px;
+	line-height: 1.5;
+	padding: 15px 0;
+}
+
+.pricingFeaturesItem:last-child {
+	border-bottom: 1px solid #e1f1ff;
+}
+
+.pricingPrice {
+	color: #016ff9;
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.pricingButton {
+	border: 1px solid #9dd1ff;
+	border-radius: 10px;
+	color: #348efe;
+	display: inline-block;
+	margin: 25px 0;
+	padding: 15px 35px;
+	text-decoration: none;
+	transition: all 150ms ease-in-out;
+}
+
+.pricingButton:hover,
+.pricingButton:focus {
+	background-color: #e1f1ff;
+}
+
+.pricingButton.is-featured {
+	background-color: #48aaff;
+	color: #fff;
+}
+
+.pricingButton.is-featured:hover,
+.pricingButton.is-featured:active {
+	background-color: #269aff;
+}
+.background {
+	padding-bottom: 0;
+}

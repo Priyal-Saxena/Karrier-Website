@@ -6,12 +6,17 @@
 	flex-direction: column;
 }
 
-.main {
-	font-weight: 600;
-	font-size: 2rem;
-	text-align: center;
-	margin-top: 90px;
-	margin-bottom: 16px;
+.main,
+h1,
+h2,
+h3 {
+	letter-spacing: 0 !important;
+	font-weight: 600 !important;
+	font-size: 2rem !important;
+	text-align: center !important;
+	margin-top: 90px !important;
+	margin-bottom: 16px !important;
+	color: rgb(56, 56, 56) !important;
 	/* max-width: 500px; */
 }
 .subtext {

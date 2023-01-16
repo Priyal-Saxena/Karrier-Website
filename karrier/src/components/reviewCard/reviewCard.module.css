@@ -74,9 +74,11 @@
 	padding-right: 2px;
 	margin-left: -24vw;
 	background: linear-gradient(
-		rgba(146, 146, 146, 0.219),
-		rgba(255, 255, 255, 0.329),
-		rgba(255, 255, 255, 0.658),
+		rgba(146, 146, 146, 0.2),
+		rgba(255, 255, 255, 0.4),
+		rgba(255, 255, 255, 0.6),
+		rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0.8),
 		rgb(255, 255, 255)
 	);
 	z-index: 2;
@@ -100,25 +102,21 @@
 	z-index: 1;
 } */
 .textContainer {
+	height: 59vh;
 	padding: 15px;
-	/* border: 2px solid #000;
-	background-color: rgb(134, 24, 24);
-	margin-top: -5px;
-	z-index: 5; */
 }
 .textContainer p {
 	padding: 15px;
 }
-
+.textContainerReflection {
+	height: 47vh !important;
+}
 .blurBorder {
 	display: grid;
 	place-content: center;
 	position: relative;
 	border: solid 0.5em rgba(#000, 0.03);
-	/* padding: 0 1em; */
-	/* height: 50vmin;
-	max-width: 13em;
-	max-height: 7em; */
+
 	box-shadow: 2px 2px 5px rgba(#000, 0.2), 2px 2px 17px rgba(#000, 0.35), 2px 2px 25px rgba(#000, 0.5);
 	/* background: $url 50% / cover border-box background-origin padding-box background-clip; */
 	color: #fff;
@@ -129,8 +127,7 @@
 .blurBorder:before {
 	position: absolute;
 	z-index: -1; /* put it *behind* parent */
-	/* go outside padding-box by 
-	 * a border-width ($b) in every direction */
+
 	top: -0.5em;
 	right: -0.5em;
 	bottom: -0.5em;
@@ -139,15 +136,20 @@
 	border-color: transparent;
 	background: inherit;
 	background-clip: border-box;
-	/* -webkit-prefixed version 
-	 * still needed for 
-	 * some mobile browsers 💔😭 */
+
 	-webkit-filter: blur(9px);
 	filter: blur(9px);
-	/* -webkit-prefixed version 
-	 * still needed for 
-	 * some mobile browsers 💔😭 */
+
 	-webkit-clip-path: inset(0);
 	clip-path: inset(0);
 	content: "";
+}
+.textContainer h5 {
+	color: grey;
+	font-size: 0.8rem;
+	padding-top: 5px;
+}
+.textContainer h2 {
+	margin: 0 !important;
+	font-size: 1.5rem !important;
 }

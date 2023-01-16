@@ -1,5 +1,9 @@
 import React from "react";
 import styles from "./achievements.module.css";
+import Achievement1 from "../../assets/achievements/Achievement1.png";
+import Achievement2 from "../../assets/achievements/Achievement2.png";
+import Achievement3 from "../../assets/achievements/Achievement3.png";
+import Achievement4 from "../../assets/achievements/Achievement4.png";
 
 function Achievements() {
 	return (
@@ -8,18 +12,13 @@ function Achievements() {
 				<li className={`${styles.card} ${styles.card_1}`}>
 					<div className={styles.card__content}>
 						<div>
-							<h2>Card One</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							{/* <p>
-								<a href="#top" className={`${styles.btn} ${styles.btn__accent}`}>
-									Read more
-								</a>
-							</p> */}
+							<p>2500+ Students placed in top pharma companies</p>
 						</div>
 						<figure>
 							<img
-								src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg"
-								alt="Image description"
+								title="jobs after graduation"
+								src={Achievement1}
+								alt="fresh graduates standing with their laptops"
 							/>
 						</figure>
 					</div>
@@ -27,56 +26,33 @@ function Achievements() {
 				<li className={`${styles.card} ${styles.card_2}`}>
 					<div className={styles.card__content}>
 						<div>
-							<h2>Card Two</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							{/* <p>
-								<a href="#top" className={`${styles.btn} ${styles.btn__accent}`}>
-									Read more
-								</a>
-							</p> */}
+							<p>More than 70% students get placed in top 100 pharma companies</p>
 						</div>
 						<figure>
-							<img
-								src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg"
-								alt="Image description"
-							/>
+							<img title="MR job" src={Achievement2} alt="smiling professional with folded arms" />
 						</figure>
 					</div>
 				</li>
 				<li className={`${styles.card} ${styles.card_3}`}>
 					<div className={styles.card__content}>
 						<div>
-							<h2>Card Three</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							{/* <p>
-								<a href="#top" className={`${styles.btn} ${styles.btn__accent}`}>
-									Read more
-								</a>
-							</p> */}
+							<p>LSSSDC/NSDC Certified trainers having rich experience in top notch companies</p>
 						</div>
 						<figure>
-							<img
-								src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg"
-								alt="Image description"
-							/>
+							<img title="pharma trainer" src={Achievement3} alt="professionals standing & smiling" />
 						</figure>
 					</div>
 				</li>
 				<li className={`${styles.card} ${styles.card_4}`}>
 					<div className={styles.card__content}>
 						<div>
-							<h2>Card Four</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							{/* <p>
-								<a href="#top" className={`${styles.btn} ${styles.btn__accent}`}>
-									Read more
-								</a>
-							</p> */}
+							<p>9 out of 10 students get their first JOB OFFER within 60 days of starting the course</p>
 						</div>
 						<figure>
 							<img
-								src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg"
-								alt="Image description"
+								title="job oriented courses after graduation"
+								src={Achievement4}
+								alt="person standing with his laptop"
 							/>
 						</figure>
 					</div>

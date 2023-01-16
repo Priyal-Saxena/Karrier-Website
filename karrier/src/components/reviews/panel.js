@@ -5,22 +5,22 @@ import smilingStudent from "../../assets/smilingStudent.png";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
+import { getThemeProps } from "@mui/system";
 
-const Panel = () => {
+const Panel = props => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.imgContainer}>
-				<img src={smilingStudent} alt="nsj" />
+				<img src={props.src} alt={`image of ${props.name}`} />
 			</div>
 			<div className={styles.line}></div>
 			<div className={styles.text}>
+				<p className={styles.info}>{props.name}</p>
+				<p className={styles.info}>{props.designation}</p>
+
 				<div>
-					<p>
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-						mollit anim id est laborum.
-					</p>
-					<Rating style={{ paddingLeft: 15 }} name="read-only" value={4} readOnly />
+					<p>{props.review}</p>
+					{/* {props.rating? <Rating style={{ paddingLeft: 15 }} name="read-only" value={props.rating} readOnly />:" ";} */}
 				</div>
 				{/* <Box
 					sx={{

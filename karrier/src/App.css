@@ -27,12 +27,53 @@
 .App-link {
 	color: #61dafb;
 }
-
+.pages {
+	padding-top: 16.5vh;
+}
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+/* for desktop */
+.whatsapp_float {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #25d366;
+	color: #fff;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	box-shadow: 2px 2px 3px #999;
+	z-index: 100;
+}
+.whatsapp_float:hover {
+	background-color: #21bc5a;
+	color: #fff;
+	box-shadow: 2px 2px 3px rgb(135, 135, 135);
+}
+
+.whatsapp-icon {
+	margin-top: 12px;
+}
+
+/* for mobile */
+@media screen and (max-width: 767px) {
+	.whatsapp-icon {
+		margin-top: 10px;
+	}
+
+	.whatsapp_float {
+		width: 40px;
+		height: 40px;
+		bottom: 20px;
+		right: 10px;
+		font-size: 22px;
 	}
 }
